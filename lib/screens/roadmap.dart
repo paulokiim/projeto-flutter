@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rp_project/widgets/card.dart';
+import 'package:rp_project/widgets/header.dart';
 
 class RoadmapScreen extends StatelessWidget {
   final mockData = [
@@ -16,6 +17,9 @@ class RoadmapScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            HeaderWidget(
+              title: 'Meus Roadmaps',
+            ),
             CardWidget(title: 'React Basico', icon: Icons.check_circle_outline),
             CardWidget(title: 'React Basico', icon: Icons.circle_outlined),
             CardWidget(title: 'React Basico', icon: Icons.lock_outline),
