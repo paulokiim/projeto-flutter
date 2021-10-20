@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/constants.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -17,7 +18,7 @@ class HomeScreen extends StatelessWidget {
                 children: <Widget>[
                   Container(
                     height: size.height * 0.2 - 27,
-                    decoration: BoxDecoration(color: Colors.green),
+                    decoration: BoxDecoration(color: kPrimaryColor),
                   ),
 
             Positioned(
@@ -35,7 +36,7 @@ class HomeScreen extends StatelessWidget {
                     BoxShadow(
                       offset: Offset  (0, 10),
                       blurRadius: 50,
-                      color: Colors.white.withOpacity(0.23)
+                      color: kPrimaryColor.withOpacity(0.23)
                     )
                   ]
                 ),
@@ -43,9 +44,9 @@ class HomeScreen extends StatelessWidget {
                       decoration: InputDecoration(
                         hintText: "Minha evolução",
                         hintStyle: TextStyle(
-                          color: Colors.grey.withOpacity(0.5)
+                          color: kPrimaryColor.withOpacity(0.5)
                         ),
-                        enabledBorder: InputBorder.none,
+                        enabledBorder: InputBorder.none,w 
                         focusedBorder: InputBorder.none,
 
                       ),
@@ -63,7 +64,7 @@ class HomeScreen extends StatelessWidget {
                           BoxShadow(
                             offset: Offset  (0, 10),
                             blurRadius: 50,
-                            color: Colors.white.withOpacity(0.25)
+                            color: kPrimaryColor.withOpacity(0.25)
                           )
                         ]
                       ),
@@ -71,7 +72,7 @@ class HomeScreen extends StatelessWidget {
                       decoration: InputDecoration(
                         hintText: "Level 10: Falta x pontos pro próximo level <br> Pontos: 9999 <br> Quero trocar meus pontos por mimos e presentinhos",
                         hintStyle: TextStyle(
-                          color: Colors.white.withOpacity(0.5)
+                          color: kPrimaryColor.withOpacity(0.5)
                         ),
                         enabledBorder: InputBorder.none,w 
                         focusedBorder: InputBorder.none,
