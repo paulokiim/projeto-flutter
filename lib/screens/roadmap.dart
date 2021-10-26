@@ -20,9 +20,18 @@ class RoadmapScreen extends StatelessWidget {
             HeaderWidget(
               title: 'Meus Roadmaps',
             ),
-            CardWidget(title: 'React Basico', icon: Icons.check_circle_outline),
-            CardWidget(title: 'React Basico', icon: Icons.circle_outlined),
-            CardWidget(title: 'React Basico', icon: Icons.lock_outline),
+            CardWidget(
+              title: 'React Basico',
+              sufixWidget: Icon(Icons.check_circle_outline),
+            ),
+            CardWidget(
+              title: 'React Basico',
+              sufixWidget: Icon(Icons.circle_outlined),
+            ),
+            CardWidget(
+              title: 'React Basico',
+              sufixWidget: Icon(Icons.lock_outline),
+            ),
           ],
         ),
       ),
