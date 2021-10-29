@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rp_project/widgets/input_text_field.dart';
+import 'package:rp_project/widgets/input-text-field.dart';
 
 class RegisterScreen extends StatefulWidget {
   @override
