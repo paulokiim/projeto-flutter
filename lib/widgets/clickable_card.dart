@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 
-class CardWidget extends StatelessWidget {
+class ClickableCardWidget extends StatelessWidget {
   final String title;
   final Widget? sufixWidget;
   final Widget? prefixWidget;
+  final String? description;
 
-  CardWidget({
-    required this.title,
-    this.sufixWidget,
-    this.prefixWidget,
-  });
+  ClickableCardWidget(
+      {required this.title,
+      this.sufixWidget,
+      this.prefixWidget,
+      this.description});
 
   @override
   Widget build(BuildContext context) {
@@ -30,10 +31,17 @@ class CardWidget extends StatelessWidget {
                     child: this.prefixWidget,
                   ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 15, top: 5),
-                  child: Text(
-                    this.title,
-                    style: TextStyle(fontSize: 18),
+                  padding: const EdgeInsets.only(left: 10, top: 5, right: 10),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        this.title,
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      if (this.description != null)
+                        Text((this.description) as String)
+                    ],
                   ),
                 ),
                 if (this.sufixWidget != null)

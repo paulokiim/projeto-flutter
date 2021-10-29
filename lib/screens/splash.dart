@@ -9,7 +9,7 @@ class SplashScreen extends StatelessWidget {
     Timer(
       Duration(seconds: 3),
       () async {
-        Navigator.of(context).pushReplacementNamed(Routes.myRoadmapScreen);
+        Navigator.of(context).pushReplacementNamed(Routes.roadmapScreen);
       },
     );
 

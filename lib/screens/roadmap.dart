@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rp_project/widgets/card.dart';
+import 'package:rp_project/widgets/clickable_card.dart';
 import 'package:rp_project/widgets/header.dart';
 
 class RoadmapScreen extends StatelessWidget {
@@ -12,28 +12,25 @@ class RoadmapScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: GestureDetector(
-        onTap: () {},
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            HeaderWidget(
-              title: 'Meus Roadmaps',
-            ),
-            CardWidget(
-              title: 'React Basico',
-              sufixWidget: Icon(Icons.check_circle_outline),
-            ),
-            CardWidget(
-              title: 'React Basico',
-              sufixWidget: Icon(Icons.circle_outlined),
-            ),
-            CardWidget(
-              title: 'React Basico',
-              sufixWidget: Icon(Icons.lock_outline),
-            ),
-          ],
-        ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          HeaderWidget(
+            title: 'Meus Roadmaps',
+          ),
+          ClickableCardWidget(
+            title: 'React Basico',
+            sufixWidget: Icon(Icons.check_circle_outline),
+          ),
+          ClickableCardWidget(
+            title: 'React Intermediario',
+            sufixWidget: Icon(Icons.circle_outlined),
+          ),
+          ClickableCardWidget(
+            title: 'React Avançado',
+            sufixWidget: Icon(Icons.lock_outline),
+          ),
+        ],
       ),
     );
   }
