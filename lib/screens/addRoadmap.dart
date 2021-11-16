@@ -27,7 +27,7 @@ class ListaRoadmaps extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: ListView(
         children:[
           Card(
             child: ListTile(

@@ -22,7 +22,7 @@ class ListaTopicos extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: ListView(
         children:[
           Card(
             child: ListTile(
@@ -43,7 +43,7 @@ class ListaTopicos extends StatelessWidget{
           Card(
             child: ListTile(
               trailing: Icon(
-                Icons.check_box,
+                Icons.lock,
                 ),
               title: Text('Tópico 3'),
             ),
@@ -51,9 +51,17 @@ class ListaTopicos extends StatelessWidget{
           Card(
             child: ListTile(
               trailing: Icon(
-                Icons.check_box,
+                Icons.lock,
                 ),
               title: Text('Tópico 4'),
+            ),
+          ),
+          Card(
+            child: ListTile(
+              trailing: Icon(
+                Icons.lock,
+                ),
+              title: Text('Tópico 5'),
             ),
           ),
         ],
