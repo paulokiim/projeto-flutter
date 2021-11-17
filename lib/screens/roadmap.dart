@@ -9,6 +9,8 @@ class RoadmapScreen extends StatelessWidget {
     {"title": "React Avancado", "icon": Icons.lock_outline},
   ];
 
+  void _gotoRoadmap(context) {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,14 +23,17 @@ class RoadmapScreen extends StatelessWidget {
           ClickableCardWidget(
             title: 'React Basico',
             sufixWidget: Icon(Icons.check_circle_outline),
+            onTap: () => _gotoRoadmap(context),
           ),
           ClickableCardWidget(
             title: 'React Intermediario',
             sufixWidget: Icon(Icons.circle_outlined),
+            onTap: () => _gotoRoadmap(context),
           ),
           ClickableCardWidget(
             title: 'React Avançado',
             sufixWidget: Icon(Icons.lock_outline),
+            onTap: () => _gotoRoadmap(context),
           ),
         ],
       ),

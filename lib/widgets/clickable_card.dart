@@ -1,39 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:rp_project/widgets/bagde.dart';
 
 class ClickableCardWidget extends StatelessWidget {
   final String title;
-  String? type = ""; //Se for 1, é de achivements
+  final String? type; //Se for 1, é de achivements
   final Widget? sufixWidget;
   final Widget? prefixWidget;
   final String? description;
   final List<String>? achivementInfo;
+  final Function onTap;
 
-  ClickableCardWidget(
-      {required this.title,
-      this.type,
-      this.sufixWidget,
-      this.prefixWidget,
-      this.description,
-      this.achivementInfo});
+  ClickableCardWidget({
+    required this.title,
+    required this.onTap,
+    this.type,
+    this.sufixWidget,
+    this.prefixWidget,
+    this.description,
+    this.achivementInfo,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Card(
       child: InkWell(
-        onTap: () {
-          if (type == "Achivement") {
-            showDialog(
-                context: context,
-                builder: (BuildContext context) {
-                  return Bagde(
-                    title: achivementInfo![0],
-                    descriptions: achivementInfo![1],
-                    text: "Fechar",
-                  );
-                });
-          }
-        },
+        onTap: () => this.onTap(),
         child: SizedBox(
           height: 70,
           width: double.infinity,
