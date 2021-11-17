@@ -5,5 +5,6 @@ class Routes {
   static String roadmapScreen = '/roadmap';
   static String myRoadmapScreen = '/my-roadmaps';
   static String newCustomRoadmap = '/add/custom-roadmap';
+  static String myAchivementsScreen = '/my-achivements';
   static String homepageScreen = '/home';
 }
