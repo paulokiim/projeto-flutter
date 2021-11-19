@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rp_project/routes.dart';
 import 'package:rp_project/widgets/clickable_card.dart';
 import 'package:rp_project/widgets/header.dart';
+import 'package:rp_project/widgets/nav-drawer.dart';
 import 'package:rp_project/widgets/roadmap-progress.dart';
 
 class MyRoadmapsScreen extends StatelessWidget {
@@ -12,12 +13,11 @@ class MyRoadmapsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: NavDrawer(),
+      appBar: AppBar(title: Text('Meus Roadmaps')),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          HeaderWidget(
-            title: 'Meus Roadmaps',
-          ),
           ClickableCardWidget(
             title: 'React Basico',
             sufixWidget: RoadmapProgressWidget(
