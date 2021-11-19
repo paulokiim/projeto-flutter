@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rp_project/widgets/bagde.dart';
 import 'package:rp_project/widgets/clickable_card.dart';
 import 'package:rp_project/widgets/header.dart';
+import 'package:rp_project/widgets/nav-drawer.dart';
 
 class MyAchivementsScreen extends StatelessWidget {
   void _onTap(context, type, achivementInfo) {
@@ -21,10 +22,9 @@ class MyAchivementsScreen extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: NavDrawer(),
+      appBar: AppBar(title: Text('Minhas conquistas')),
       body: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-        HeaderWidget(
-          title: 'Minhas Conquistas',
-        ),
         ClickableCardWidget(
           title: 'Hello, Roadmap',
           type: "Achivement",

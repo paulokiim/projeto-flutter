@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rp_project/widgets/header.dart';
 import 'package:rp_project/widgets/input-text-field.dart';
+import 'package:rp_project/widgets/nav-drawer.dart';
 import 'package:rp_project/widgets/text-area.dart';
 
 class NewCustomRoadmap extends StatefulWidget {
@@ -21,12 +22,11 @@ class _NewCustomRoadmapState extends State<NewCustomRoadmap> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: NavDrawer(),
+      appBar: AppBar(title: Text('Criar roadmap customizado')),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          HeaderWidget(
-            title: 'Criar roadmap customizado',
-          ),
           SizedBox(
             height: 10,
           ),
