@@ -4,22 +4,24 @@ import 'package:rp_project/widgets/input-text-field.dart';
 import 'package:rp_project/widgets/nav-drawer.dart';
 import 'package:rp_project/widgets/text-area.dart';
 
-class NewCustomRoadmap extends StatefulWidget {
+class NewCustomRoadmapCreateTopic extends StatefulWidget {
   @override
-  State<NewCustomRoadmap> createState() => _NewCustomRoadmapState();
+  State<NewCustomRoadmapCreateTopic> createState() =>
+      _NewCustomRoadmapCreateTopicState();
 }
 
-class _NewCustomRoadmapState extends State<NewCustomRoadmap> {
-  final _roadmapNameController = TextEditingController();
+class _NewCustomRoadmapCreateTopicState
+    extends State<NewCustomRoadmapCreateTopic> {
+  final _topicNameController = TextEditingController();
 
   void _gotoTopicScreen(context) {
-    Navigator.of(context).pushNamed(Routes.newCustomRoadmapTopic);
+    Navigator.of(context).pop();
   }
 
   @override
   void dispose() {
     // Clean up the controller when the widget is disposed.
-    _roadmapNameController.dispose();
+    _topicNameController.dispose();
     super.dispose();
   }
 
@@ -27,7 +29,7 @@ class _NewCustomRoadmapState extends State<NewCustomRoadmap> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: NavDrawer(),
-      appBar: AppBar(title: Text('Criar roadmap customizado')),
+      appBar: AppBar(title: Text('Criar tópico customizado')),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -37,18 +39,19 @@ class _NewCustomRoadmapState extends State<NewCustomRoadmap> {
           Padding(
             padding: const EdgeInsets.all(15),
             child: InputTextField(
-              controller: _roadmapNameController,
+              controller: _topicNameController,
               keyboardType: TextInputType.text,
-              labelText: 'Nome do roadmap',
+              labelText: 'Nome do tópico',
               visiblePassword: true,
             ),
           ),
           TextAreaWidget(
-            labelText: 'Descrição do roadmap',
+            labelText: 'Qual o conteúdo teórico deste tópico?',
             maxLines: 8,
           ),
           TextAreaWidget(
-            labelText: 'O que se aprende nesse roadmap?',
+            labelText:
+                'Materias complementares(links de artigos, videos, palestras e etc)',
             maxLines: 8,
           ),
           Padding(
