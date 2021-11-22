@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rp_project/routes.dart';
 import 'package:rp_project/widgets/clickable_card.dart';
-import 'package:rp_project/widgets/header.dart';
 import 'package:rp_project/widgets/nav-drawer.dart';
 import 'package:rp_project/widgets/roadmap-progress.dart';
 

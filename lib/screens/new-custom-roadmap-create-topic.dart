@@ -4,12 +4,14 @@ import 'package:rp_project/widgets/input-text-field.dart';
 import 'package:rp_project/widgets/nav-drawer.dart';
 import 'package:rp_project/widgets/text-area.dart';
 
-class NewCustomRoadmap extends StatefulWidget {
+class NewCustomRoadmapCreateTopic extends StatefulWidget {
   @override
-  State<NewCustomRoadmap> createState() => _NewCustomRoadmapState();
+  State<NewCustomRoadmapCreateTopic> createState() =>
+      _NewCustomRoadmapCreateTopicState();
 }
 
-class _NewCustomRoadmapState extends State<NewCustomRoadmap> {
+class _NewCustomRoadmapCreateTopicState
+    extends State<NewCustomRoadmapCreateTopic> {
   final _roadmapNameController = TextEditingController();
 
   void _gotoTopicScreen(context) {

@@ -5,6 +5,7 @@ import 'package:rp_project/screens/login.dart';
 import 'package:rp_project/screens/my-achivements.dart';
 import 'package:rp_project/screens/my-roadmaps.dart';
 import 'package:rp_project/screens/new-custom-roadmap.dart';
+import 'package:rp_project/screens/new-custom-roadmap-topic.dart';
 import 'package:rp_project/screens/register.dart';
 import 'package:rp_project/screens/roadmap.dart';
 import 'package:rp_project/screens/splash.dart';
@@ -27,6 +28,7 @@ class App extends StatelessWidget {
         Routes.roadmapScreen: (context) => RoadmapScreen(),
         Routes.myRoadmapScreen: (context) => MyRoadmapsScreen(),
         Routes.newCustomRoadmap: (context) => NewCustomRoadmap(),
+        Routes.newCustomRoadmapTopic: (context) => NewCustomRoadmapTopic(),
         Routes.myAchivementsScreen: (context) => MyAchivementsScreen(),
       },
     );
