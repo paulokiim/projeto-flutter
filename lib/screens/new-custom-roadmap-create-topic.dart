@@ -12,16 +12,16 @@ class NewCustomRoadmapCreateTopic extends StatefulWidget {
 
 class _NewCustomRoadmapCreateTopicState
     extends State<NewCustomRoadmapCreateTopic> {
-  final _roadmapNameController = TextEditingController();
+  final _topicNameController = TextEditingController();
 
   void _gotoTopicScreen(context) {
-    Navigator.of(context).pushReplacementNamed(Routes.newCustomRoadmapTopic);
+    Navigator.of(context).pop();
   }
 
   @override
   void dispose() {
     // Clean up the controller when the widget is disposed.
-    _roadmapNameController.dispose();
+    _topicNameController.dispose();
     super.dispose();
   }
 
@@ -29,7 +29,7 @@ class _NewCustomRoadmapCreateTopicState
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: NavDrawer(),
-      appBar: AppBar(title: Text('Criar roadmap customizado')),
+      appBar: AppBar(title: Text('Criar tópico customizado')),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -39,18 +39,19 @@ class _NewCustomRoadmapCreateTopicState
           Padding(
             padding: const EdgeInsets.all(15),
             child: InputTextField(
-              controller: _roadmapNameController,
+              controller: _topicNameController,
               keyboardType: TextInputType.text,
-              labelText: 'Nome do roadmap',
+              labelText: 'Nome do tópico',
               visiblePassword: true,
             ),
           ),
           TextAreaWidget(
-            labelText: 'Descrição do roadmap',
+            labelText: 'Qual o conteúdo teórico deste tópico?',
             maxLines: 8,
           ),
           TextAreaWidget(
-            labelText: 'O que se aprende nesse roadmap?',
+            labelText:
+                'Materias complementares(links de artigos, videos, palestras e etc)',
             maxLines: 8,
           ),
           Padding(

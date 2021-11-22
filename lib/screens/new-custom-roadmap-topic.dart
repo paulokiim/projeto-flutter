@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:rp_project/routes.dart';
 import 'package:rp_project/widgets/clickable_card.dart';
 import 'package:rp_project/widgets/nav-drawer.dart';
 
 class NewCustomRoadmapTopic extends StatelessWidget {
   final List<String> addedTopics = ['React Básico', 'Startup enxuta'];
+
+  void _gotoConfigureScreen(context) {
+    Navigator.of(context).pushNamed(Routes.newCustomRoadmapConfigure);
+  }
+
+  void _gotoCreateTopicScreen(context) {
+    Navigator.of(context).pushNamed(Routes.newCustomRoadmapCreateTopic);
+  }
 
   List<Widget> _getAddedTopics() {
     return addedTopics
@@ -39,12 +48,12 @@ class NewCustomRoadmapTopic extends StatelessWidget {
           ClickableCardWidget(
             title: 'Adicionar novo tópico',
             sufixWidget: Icon(Icons.add_circle_outline_outlined),
-            onTap: () {},
+            onTap: () => _gotoCreateTopicScreen(context),
           ),
           Padding(
             padding: const EdgeInsets.all(15),
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () => _gotoConfigureScreen(context),
               child: Text('Continuar'),
             ),
           ),

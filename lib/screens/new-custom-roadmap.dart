@@ -13,7 +13,7 @@ class _NewCustomRoadmapState extends State<NewCustomRoadmap> {
   final _roadmapNameController = TextEditingController();
 
   void _gotoTopicScreen(context) {
-    Navigator.of(context).pushReplacementNamed(Routes.newCustomRoadmapTopic);
+    Navigator.of(context).pushNamed(Routes.newCustomRoadmapTopic);
   }
 
   @override

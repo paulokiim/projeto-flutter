@@ -6,7 +6,11 @@ import 'package:rp_project/widgets/roadmap-progress.dart';
 
 class MyRoadmapsScreen extends StatelessWidget {
   void _addNewRoadmap(context) {
-    Navigator.of(context).pushReplacementNamed(Routes.newCustomRoadmap);
+    // TODO
+  }
+
+  void _addNewCustomRoadmap(context) {
+    Navigator.of(context).pushNamed(Routes.newCustomRoadmap);
   }
 
   @override
@@ -45,7 +49,7 @@ class MyRoadmapsScreen extends StatelessWidget {
             prefixWidget: Icon(Icons.add_circle_outline_outlined),
             sufixWidget: SizedBox(),
             description: 'Bora começar mais uma trilha?',
-            onTap: () => _addNewRoadmap(context),
+            onTap: () => _addNewCustomRoadmap(context),
           ),
         ],
       ),
