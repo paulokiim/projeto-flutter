@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rp_project/routes.dart';
+import 'package:rp_project/screens/home.dart';
 import 'package:rp_project/screens/login.dart';
 import 'package:rp_project/screens/my-achivements.dart';
 import 'package:rp_project/screens/my-roadmaps.dart';
@@ -29,6 +30,7 @@ class App extends StatelessWidget {
         Routes.registerScreen: (context) => RegisterScreen(),
         Routes.roadmapScreen: (context) => RoadmapScreen(),
         Routes.myRoadmapScreen: (context) => MyRoadmapsScreen(),
+        Routes.homepageScreen: (context) => HomeScreen(),
         Routes.newCustomRoadmap: (context) => NewCustomRoadmap(),
         Routes.newCustomRoadmapTopic: (context) => NewCustomRoadmapTopic(),
         Routes.newCustomRoadmapCreateTopic: (context) =>
