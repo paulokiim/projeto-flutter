@@ -1,42 +1,73 @@
 import 'package:flutter/material.dart';
-import 'package:rp_project/widgets/clickable_card.dart';
-import 'package:rp_project/widgets/header.dart';
+import 'package:flutter/rendering.dart';
+import 'package:rp_project/routes.dart';
 
-class RoadmapScreen extends StatelessWidget {
-  final mockData = [
-    {"title": "React Basico", "icon": Icons.circle_outlined},
-    {"title": "React Intermediario", "icon": Icons.check_circle_outline},
-    {"title": "React Avancado", "icon": Icons.lock_outline},
-  ];
+class roadmap extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Roadmap',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Roadmap X'),
+          backgroundColor: Colors.grey,
+      ),
+      body: ListaTopicos(),
+    ),
+    );
+  }
+}
 
-  void _gotoRoadmap(context) {}
-
+class ListaTopicos extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          HeaderWidget(
-            title: 'Meus Roadmaps',
+      body: ListView(
+        children:[
+          Card(
+            child: ListTile(
+              trailing: Icon(
+                Icons.check_box,
+                ),
+              title: Text('Tópico 1'),
+            ),
           ),
-          ClickableCardWidget(
-            title: 'React Basico',
-            sufixWidget: Icon(Icons.check_circle_outline),
-            onTap: () => _gotoRoadmap(context),
+          Card(
+            child: ListTile(
+              trailing: Icon(
+                Icons.check_box,
+                ),
+              title: Text('Tópico 2'),
+            ),
           ),
-          ClickableCardWidget(
-            title: 'React Intermediario',
-            sufixWidget: Icon(Icons.circle_outlined),
-            onTap: () => _gotoRoadmap(context),
+          Card(
+            child: ListTile(
+              trailing: Icon(
+                Icons.lock,
+                ),
+              title: Text('Tópico 3'),
+            ),
           ),
-          ClickableCardWidget(
-            title: 'React Avançado',
-            sufixWidget: Icon(Icons.lock_outline),
-            onTap: () => _gotoRoadmap(context),
+          Card(
+            child: ListTile(
+              trailing: Icon(
+                Icons.lock,
+                ),
+              title: Text('Tópico 4'),
+            ),
+          ),
+          Card(
+            child: ListTile(
+              trailing: Icon(
+                Icons.lock,
+                ),
+              title: Text('Tópico 5'),
+            ),
           ),
         ],
       ),
     );
   }
+
+
 }
