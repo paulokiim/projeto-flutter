@@ -2,21 +2,28 @@ import 'package:flutter/material.dart';
 
 class ClickableCardWidget extends StatelessWidget {
   final String title;
+  final String? type; //Se for 1, é de achivements
   final Widget? sufixWidget;
   final Widget? prefixWidget;
   final String? description;
+  final List<String>? achivementInfo;
+  final Function onTap;
 
-  ClickableCardWidget(
-      {required this.title,
-      this.sufixWidget,
-      this.prefixWidget,
-      this.description});
+  ClickableCardWidget({
+    required this.title,
+    required this.onTap,
+    this.type,
+    this.sufixWidget,
+    this.prefixWidget,
+    this.description,
+    this.achivementInfo,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Card(
       child: InkWell(
-        onTap: () {},
+        onTap: () => this.onTap(),
         child: SizedBox(
           height: 70,
           width: double.infinity,
