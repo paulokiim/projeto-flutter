@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:rp_project/routes.dart';
 
@@ -9,7 +8,7 @@ class SplashScreen extends StatelessWidget {
     Timer(
       Duration(seconds: 3),
       () async {
-        Navigator.of(context).pushReplacementNamed(Routes.perguntasTopico);
+        Navigator.of(context).pushReplacementNamed(Routes.roadmap);
       },
     );
 
