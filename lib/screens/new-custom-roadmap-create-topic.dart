@@ -28,7 +28,6 @@ class _NewCustomRoadmapCreateTopicState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: NavDrawer(),
       appBar: AppBar(title: Text('Criar tópico customizado')),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,

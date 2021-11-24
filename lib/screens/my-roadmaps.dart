@@ -6,7 +6,11 @@ import 'package:rp_project/widgets/roadmap-progress.dart';
 
 class MyRoadmapsScreen extends StatelessWidget {
   void _addNewRoadmap(context) {
-    // TODO
+    Navigator.of(context).pushNamed(Routes.addRoadmap);
+  }
+
+  void _gotoRoadmap(context) {
+    Navigator.of(context).pushNamed(Routes.roadmapScreen);
   }
 
   void _addNewCustomRoadmap(context) {
@@ -27,15 +31,15 @@ class MyRoadmapsScreen extends StatelessWidget {
               progress: '10%',
               checkpoint: 'Ontem',
             ),
-            onTap: () => _addNewRoadmap(context),
+            onTap: () => _gotoRoadmap(context),
           ),
           ClickableCardWidget(
-            title: 'React Avançado',
+            title: 'React Intermediario',
             sufixWidget: RoadmapProgressWidget(
               progress: '25%',
               checkpoint: '27/10/2021',
             ),
-            onTap: () => _addNewRoadmap(context),
+            onTap: () => _gotoRoadmap(context),
           ),
           ClickableCardWidget(
             title: 'Adicionar um novo roadmap',

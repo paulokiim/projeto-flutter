@@ -13,7 +13,6 @@ import 'package:rp_project/screens/new-custom-roadmap-create-topic.dart';
 import 'package:rp_project/screens/new-custom-roadmap.dart';
 import 'package:rp_project/screens/new-custom-roadmap-topic.dart';
 import 'package:rp_project/screens/register.dart';
-import 'package:rp_project/screens/roadmap.dart';
 import 'package:rp_project/screens/splash.dart';
 
 class App extends StatelessWidget {
@@ -32,7 +31,7 @@ class App extends StatelessWidget {
         Routes.loginScreen: (context) => LoginScreen(),
         Routes.registerScreen: (context) => RegisterScreen(),
         Routes.addRoadmap: (context) => AddRoadmap(),
-        Routes.roadmap: (context) => roadmap(),
+        Routes.roadmapScreen: (context) => RoadmapScreen(),
         Routes.topico: (context) => topico(),
         Routes.perguntasTopico: (context) => perguntasTopico(),
         Routes.myRoadmapScreen: (context) => MyRoadmapsScreen(),

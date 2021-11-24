@@ -7,8 +7,7 @@ class topico extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Tópico X'),
-        backgroundColor: Colors.grey,
+        title: Text('Conhecendo os React Hooks'),
       ),
       body: Topico(),
     );
