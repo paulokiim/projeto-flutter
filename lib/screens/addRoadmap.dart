@@ -16,7 +16,7 @@ class AddRoadmap extends StatelessWidget {
 
 class ListaRoadmaps extends StatelessWidget {
   void _gotoRoadmapScreen(context) {
-    Navigator.of(context).pushNamed(Routes.myRoadmapScreen);
+    Navigator.of(context).pushNamed(Routes.roadmapTopicScreen);
   }
 
   @override
