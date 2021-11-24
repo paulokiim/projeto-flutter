@@ -26,7 +26,6 @@ class _NewCustomRoadmapState extends State<NewCustomRoadmap> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: NavDrawer(),
       appBar: AppBar(title: Text('Criar roadmap customizado')),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,

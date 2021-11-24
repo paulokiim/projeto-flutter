@@ -29,7 +29,6 @@ class NewCustomRoadmapTopic extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: NavDrawer(),
       appBar: AppBar(title: Text('Tópicos do roadmap')),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
