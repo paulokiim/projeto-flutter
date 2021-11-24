@@ -17,7 +17,6 @@ class _NewCustomRoadmapConfigureState extends State<NewCustomRoadmapConfigure> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: NavDrawer(),
       appBar: AppBar(title: Text('Configurar roadmap')),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,

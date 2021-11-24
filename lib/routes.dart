@@ -2,7 +2,11 @@ class Routes {
   static String splashScreen = '/';
   static String loginScreen = '/login';
   static String registerScreen = '/register';
+  static String addRoadmap = '/addRoadmap';
+  static String topico = '/topico';
+  static String perguntasTopico = '/perguntasTopico';
   static String roadmapScreen = '/roadmap';
+  static String roadmapTopicScreen = '/roadmap-topic';
   static String myRoadmapScreen = '/my-roadmaps';
   static String newCustomRoadmap = '/add/custom-roadmap';
   static String newCustomRoadmapTopic = '/add/topic-custom-roadmap';
