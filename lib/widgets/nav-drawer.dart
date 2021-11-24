@@ -22,7 +22,9 @@ class NavDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.account_box),
             title: Text('Meu Perfil'),
-            onTap: () => {},
+            onTap: () => {
+              Navigator.of(context).pushReplacementNamed(Routes.homepageScreen)
+            },
           ),
           ListTile(
             leading: Icon(Icons.alt_route),
