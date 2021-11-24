@@ -1,113 +1,113 @@
-/*import 'package:flutter/material.dart';
-import 'package:rp_project/routes.dart';
-
-class HomeScreen extends StatefulWidget {
- 
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          Card(
-            child: ListTile(
-              leading: Icon(Icons.add),
-              title: Text('React Básico'),
-            ),
-          ),
-          Card(
-            child: ListTile(
-              leading: Icon(Icons.add),
-              title: Text('Flutter Básico'),
-            ),
-          ),
-          Card(
-            child: ListTile(
-              leading: Icon(Icons.add),
-              title: Text('Git Básico'),
-            ),
-          ),
-        ],
-      ),
-      appBar: AppBar(
-        title: Text('Adicionar Roadmap'),
-        backgroundColor: Colors.grey,
-      ),
-    );
-  }
-}
-* 
-* 
-* 
-* 
-* 
-* 
-* 
-* 
-* 
-* 
-* 
-* 
-* 
-* 
-* */
-
 import 'package:flutter/material.dart';
+import 'package:rp_project/screens/my-achivements.dart';
+import 'package:rp_project/widgets/clickable_card.dart';
+import 'package:rp_project/widgets/nav-drawer.dart';
+
+import '../routes.dart';
 
 class HomeScreen extends StatelessWidget {
-  // get color => null;
+  /*Widget _goToSidebar(context) {
+    Navigator.of(context).pushNamed(Routes.newCustomRoadmapConfigure);
+    return Icon(
+      Icons.view_sidebar,
+    );
+  }*/
+
+  /*void _goToMyAchivementsScreen(context) {
+    Navigator.of(context).pushNamed(Routes.myAchivementsScreen);
+  }*/
+
+  void _goToMyAchivementsScreen(context) {
+    Navigator.of(context).pushNamed(Routes.myAchivementsScreen);
+  }
+
+  void _goToMyRoadmapsScreen(context) {
+    Navigator.of(context).pushNamed(Routes.myRoadmapScreen);
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: NavDrawer(),
+      appBar: AppBar(title: Text('Home')),
       body: Column(children: [
-        /* Container(
-          color: Colors.green,
-          width: double.infinity,
-          height: 70.0,
-          child: Center(
-            child: Text('Home'),
+        //vertical space between the appBar and the first thing properly of the page
+
+        /* Row(children: [
+          IconButton(
+            onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => myAchivementsScreen),
+                );
+              }
+            icon: Icon(Icons.view_sidebar,),
+             ///////////////////////// color: Colors.grey,
+              /*highlightColor: Colors.red,
+              hoverColor: Colors.green,
+              focusColor: Colors.purple,
+              splashColor: Colors.yellow,
+              disabledColor: Colors.amber,*/
+              //size: 48,
+              
+              // ),
           ),
-        ),*/
-
-        //top: 10,
-        // left: 25,
-        // height: 15, //o eixo y
-        // width: 150, //o tamanho
-
-        SizedBox(
-          width: 0,
-          height: 25,
-        ),
-
+        ]),*/
         Row(
+            //foto do bixo
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              /*Container(
-                margin: EdgeInsets.all(30.0),
-                width: 15,
-                height: 15,
-                decoration: BoxDecoration(
-                  color: Colors.blue,
-                  shape: BoxShape.circle,
-                ),
+              /*
+              ClickableCardWidget(
+                title: '',
+                sufixWidget: Icon(Icons.check_circle_outline),
+                onTap: () => _goToMyRoadmapsScreen(context),
               ),*/
               Container(
-                //margin: EdgeInsets.all(10.0),
+                margin: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(100),
+                    border: Border.all(width: 2, color: Colors.blueGrey)),
+                child: Icon(
+                  Icons.person,
+                  color: Colors.black,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(15),
+                //child: ElevatedButton(
+                // onPressed: () => _gotoMyRoadmapScreen(context),
+                child: Text('Minha evolução'),
+              ),
+            ]),
+
+        /* DecoratedBox(
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(width: 5.0, color: Colors.white),
+                ),
+              ),
+              Card(
+                child: Center(
+                  child: Text('Minha evolução'),
+                ),
+//                title: 'Minha evolução',
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12.0),
+                ),
+              ),
+              */
+        /* Container(
                 width: 200,
                 height: 50,
                 child: Center(
                   child: ElevatedButton(
                     onPressed: () {},
-                    child:
-                        //Column(children: [
-                        Center(
+                    child: Center(
                       child: Text("Minha evolução"),
                     ),
-                    // Center(
-                    // child: Text("Faltam x pontos para o próximo nível"),
-                    //),
-                    //]
-
                     style: ButtonStyle(
                       elevation: MaterialStateProperty.all(5),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -119,14 +119,15 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-              ),
-            ]),
+              ),*/
+        Padding(
+          padding: const EdgeInsets.all(15),
+          //child: ElevatedButton(
+          // onPressed: () => _gotoMyRoadmapScreen(context),
+          child: Text('Nível 8'),
+        ),
 
-        //),
-
-        Container(
-          //    margin: EdgeInsets.all(5.0),
-
+        /*Container(
           width: 200,
           height: 50,
           child: ElevatedButton(
@@ -147,42 +148,50 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
-        ),
+        ),*/
 
         SizedBox(
-          width: 50,
-          height: 50,
+          width: 25,
+          height: 45,
         ),
 
-        SizedBox(
-          //margin: EdgeInsets.all(42.0),
-          width: 500,
-          height: 300,
+        Card(
           child: Column(children: [
-            Card(
-              child: Text("Meus últimos roadmaps"),
+            Text(
+              "Meus últimos roadmaps",
+              style: TextStyle(fontSize: 19),
             ),
             SizedBox(
               width: 25,
               height: 25,
             ),
             Row(children: [
+              //width: 200,
+              //height: 100,
+
               SizedBox(
-                width: 200,
-                height: 100,
-                child: Column(
-                  children: [
-                    //child: Center(
-                    Center(child: Text("React Básico")),
-                    Center(child: Text("------------------------")),
-                    Center(child: Text("Completo 34%")),
-                    Center(child: Text("Última vez: ontem")),
-                  ],
-                ),
+                width: 5,
+                height: 0,
               ),
+
+              Column(
+                children: [
+                  //child: Center(
+                  Center(child: Text("React Básico")),
+                  Center(child: Text("------------------------")),
+                  Center(child: Text("Completo 34%")),
+                  Center(child: Text("Última vez: ontem")),
+                ],
+              ),
+
               SizedBox(
-                width: 200,
-                height: 100,
+                width: 20,
+                height: 0,
+              ),
+
+              Card(
+                //width: 150,
+                //height: 100,
                 child: Column(
                   children: [
                     //child: Center(
@@ -194,479 +203,59 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ]),
-            Text("Ver tudo"),
+            Center(
+              child: ClickableCardWidget(
+                title: 'Ver tudo',
+                onTap: () => _goToMyRoadmapsScreen(context),
+              ),
+            ),
           ]),
         ),
 
-        SizedBox(
-          width: 500,
-          height: 100,
-          child: Column(
-            children: [
-              Center(
-                child: Text("Minhas conquistas"),
+        Card(
+          child: Column(children: [
+            Text(
+              'Minhas conquistas',
+              style: TextStyle(fontSize: 19),
+            ),
+            SizedBox(
+              width: 0,
+              height: 30,
+            ),
+            Row(children: [
+              SizedBox(
+                width: 100,
+                height: 0,
+              ),
+              Column(
+                children: [Icon(Icons.add_circle_outline_outlined), Text('#1')],
               ),
               SizedBox(
-                width: 0,
-                height: 30,
+                width: 110,
+                height: 0,
               ),
-              Row(
-                children: [
-                  SizedBox(
-                    width: 30,
-                    height: 0,
-                  ),
-                  Center(
-                    child: Text("#1"),
-                  ),
-                  SizedBox(
-                    width: 150,
-                    height: 0,
-                  ),
-                  Center(
-                    child: Text("#2"),
-                  ),
-                  SizedBox(
-                    width: 150,
-                    height: 0,
-                  ),
-                  Center(
-                    child: Text("#3"),
-                  ),
-                ],
-              )
-            ],
-          ),
-        )
-      ]),
-      appBar: AppBar(
-        title: Center(
-          child: Text('Home'),
+              Column(
+                children: [Icon(Icons.add_circle_outline_outlined), Text('#2')],
+              ),
+              SizedBox(
+                width: 50,
+                height: 0,
+              ),
+              /* Column(
+                children: [Icon(Icons.add_circle_outline_outlined), Text('#3')],
+              ),*/
+            ]),
+            SizedBox(
+              width: 20,
+              height: 0,
+            ),
+            ClickableCardWidget(
+              title: 'Ver tudo',
+              onTap: () => _goToMyAchivementsScreen(context),
+            ),
+          ]),
         ),
-        backgroundColor: Colors.grey,
-      ),
-    );
-  }
-}
-                
-              
-        
-  
-     /* color: Colors.blueGrey,
-  
-      children: [
-
-          SizedBox(
-  
-    width: 250,
-  
-    height: 200,
-  
-    child: RaisedButton(
-  
-      color: Colors.blue,
-  
-      child: Text('Woolha', style: TextStyle(color: Colors.white)),
-  
-      onPressed: () {},
-  
-    ),),
-
-      SizedBox(
-  
-    width: 250,
-  
-    height: 200,
-  
-    child: RaisedButton(
-  
-      color: Colors.blue,
-  
-      child: Text('Woolha', style: TextStyle(color: Colors.white)),
-  
-      onPressed: () {},
-  
-    ),),t
-      ]
-
-      //child: Text('Woolha', style: TextStyle(color: Colors.white)),
-  
-      onPressed: () {},
-  
-    ),
-
-
-    ),
-        
       ]),
     );
   }
 }
-*/
-      
-    /*     appBar: AppBar(
-        title: Text('home'),
-        backgroundColor: Colors.grey,
-      ),
-
-* 
-* Card(
-            child: ListTile(
-              leading: Icon(Icons.add),
-              title: Text('Minha evolução'),
-            ),
-          ),
-          Card(
-            child: ListTile(
-              leading: Icon(Icons.add),
-              title: Text('Level 10: Faltam x pontos para o próximo nivel'),
-            ),
-          ),
-          Card(
-            child: ListTile(
-              leading: Icon(Icons.add),
-              title: Text('Quero trocar meus pontos por mimos e presentes'),
-            ),
-          ),
-
-          Card(
-            child: ListTile(
-              leading: Icon(Icons.add),
-              title: Text('Meus últimos roadmaps'),
-            ),
-          ),
-
-          Card(
-            child: ListTile(
-              leading: Icon(Icons.add),
-              title: Text('React Básico'),
-            ),
-          ),
-
-          Card(
-            child: ListTile(
-              leading: Icon(Icons.add),
-              title: Text('Educação Financeira'),
-            ),
-          ),
-
-          Card(
-            child: ListTile(
-              leading: Icon(Icons.add),
-              title: Text('Minhas últimas conquistas'),
-            ),
-          ),
-
-
-
-
-
-
-        ],*/
-        /*child:
-    *           Text(
-          'Green',
-          style: TextStyle(
-              color: Colors.white,
-              fontSize: 20
-          ),
-        ),*/
-
-/* child: Stack(
-          children: [
-            Container(
-              height: double.infinity,
-              width: double.infinity,
-              color: Colors.white,
-            ),
-            Container(
-              width: double.infinity,
-              child: SingleChildScrollView(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 40.0,
-                  vertical: 80.0,
-                ),
-                child: Column(
-                  children: <Widget>[
-                    Text(
-                      "Pet Store",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 23,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 40,
-                    ),
-                    InputTextField(
-                      controller: _emailController,
-                      keyboardType: TextInputType.emailAddress,
-                      hintText: 'Digite seu email',
-                      prefixIcon: Icon(Icons.email),
-                      labelText: 'Email',
-                      visiblePassword: true,
-                      hasSufixIcon: false,
-                    ),
-                    InputTextField(
-                      controller: _passwordController,
-                      keyboardType: TextInputType.text,
-                      hintText: 'Digite sua senha',
-                      prefixIcon: Icon(Icons.lock),
-                      labelText: 'Senha',
-                      visiblePassword: false,
-                      hasSufixIcon: true,
-                    ),
-                    Container(
-                      alignment: Alignment.centerRight,
-                      child: InkWell(
-                        onTap: () {},
-                        child: Text(
-                          "Esqueceu sua senha?",
-                          style: TextStyle(
-                            color: Colors.red,
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    Container(
-                      alignment: Alignment.centerLeft,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Checkbox(
-                            value: _rememberMe,
-                            onChanged: _handleCheckbox,
-                          ),
-                          Text('Remember me'),
-                        ]
-                      ),
-                    ),
-                    Container(
-                      width: double.infinity,
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        child: Text("Login"),
-                        style: ButtonStyle(
-                          elevation: MaterialStateProperty.all(5),
-                          shape:
-                              MaterialStateProperty.all<RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30.0),
-                              side: BorderSide(color: Colors.red),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Column(
-                      children: [
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text('-- OR --'),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text(
-                          'Sign In With',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(15),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          GestureDetector(
-                            onTap: () {},
-                            child: Container(
-                              height: 60,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Colors.white,
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.black,
-                                    offset: Offset(0, 2),
-                                    blurRadius: 6,
-                                  ),
-                                ],
-                                image: DecorationImage(
-                                  image: AssetImage('assets/images/google.png'),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () => Navigator.pushNamed(context, '/register'),
-                      child: RichText(
-                        text: TextSpan(
-                          children: [
-                            TextSpan(
-                              text: 'Ainda nao tem uma conta? ',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 18,
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ),
-                            TextSpan(
-                              text: 'Registre-se',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-*/
-/*  }
-}
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*appBar: AppBar()(		
-		//backgroundColor: Colors.blueGrey,
-		title: Text('Home'),
-		backgroundColor: Colors.blueGrey[900],
-	),
-);}}*/
-	
-	/*Center(
-					child: Image(
-						image:
-							 NetworkImage('https://negociodecozinha.com.br/wp-content/uploads/2017/07/tapioca2.jpg'),
-					),
-				),
-			),
-	Container(
-        	height: 80,
-		Stack(
-		child:
-			Container(
-				height: 200,
-           			decoration: BoxDecoration(color: Colors.green),
-			),
-		),	
-	),
-);
-}
-}
-
-
-*/
-     /*@override
-    Size size = MediaQuery.of(context).size;
-    return Builder(
-      builder: (context) {
-        return Column(
-          chil  dren: <Widget>[
-            
-
-            
-                
-                
-                    ),
-                    ),
-
-                    
-                  ),
-
-                  child: TextField(
-                      decoration: InputDecoration(
-                        hintText: "Minha evolução",
-                        hintStyle: TextStyle(
-                          color: Colors.grey.withOpacity(0.5)
-                        ),
-                        enabledBorder: InputBorder.none,
-                        focusedBorder: InputBorder.none,
-
-                      ),
-                    ),
-                    ),
-
-              child: Container( 
-                      alignment: Alignment.center,
-                      margin: EdgeInsets.all(30),
-                      //symmetric(horizontal: kDefaultPadding),
-                      height: 200,
-                      decoration: BoxDecoration(
-                        color: Colors.grey,
-                        borderRadius: BorderRadius.circular(40),
-                        boxShadow: [
-                          BoxShadow(
-                            offset: Offset  (0, 10),
-                            blurRadius: 50,
-                            color: Colors.white.withOpacity(0.25)
-                          )
-                        ]
-                      ),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        hintText: "Level 10: Falta x pontos pro próximo level <br> Pontos: 9999 <br> Quero trocar meus pontos por mimos e presentinhos",
-                        hintStyle: TextStyle(
-                          color: Colors.white.withOpacity(0.5)
-                        ),
-                        enabledBorder: InputBorder.none,
-                        focusedBorder: InputBorder.none,
-
-                      ),
-                    ),
-              
-                ],
-              ),
-            )
-          ],
-        );
-      }
-    );
-  }
-
-    //  buildAppBar(){
-      //  return AppBar(
-        //  elevation: 0,
-          //leading: IconButton(
-         // icon: SvgPicture.asset("assets/icons/menu.svg"),
-         // onPressed: () {},
-         // ),
-        //)
-      //}
-}*/
