@@ -16,7 +16,7 @@ class perguntasTopico extends StatelessWidget {
 
 class ListaPerguntas extends StatelessWidget {
   void _gotoTopicConclusionScreen(context) {
-    Navigator.of(context).pushNamed(Routes.myRoadmapScreen);
+    Navigator.of(context).pushNamed(Routes.roadmapConclusionScreen);
   }
 
   @override

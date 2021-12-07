@@ -7,6 +7,7 @@ class Routes {
   static String perguntasTopico = '/perguntasTopico';
   static String roadmapScreen = '/roadmap';
   static String roadmapTopicScreen = '/roadmap-topic';
+  static String roadmapConclusionScreen = '/roadmap-conclusion';
   static String myRoadmapScreen = '/my-roadmaps';
   static String newCustomRoadmap = '/add/custom-roadmap';
   static String newCustomRoadmapTopic = '/add/topic-custom-roadmap';
